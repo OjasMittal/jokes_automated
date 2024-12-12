@@ -13,7 +13,6 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 EMAIL_LOGIN = os.getenv("EMAIL_LOGIN")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
-
 TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
 TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
 TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
@@ -31,10 +30,9 @@ def send_joke():
 
     name = data.get("name")
     email = data.get("email")
-    phone = data.get("phone")
-    joke = data.get("joke")
+    joke = random.choice(jokes)
 
-    if not (name and email and joke):
+    if not (name and email):
         return jsonify({"error": "Missing required fields"}), 400
     try:
         send_email(name, email, joke)
