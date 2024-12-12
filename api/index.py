@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import smtplib
 import random
-from jokes import jokes
+from utils.jokes import jokes
 import os
 from dotenv import load_dotenv
 
