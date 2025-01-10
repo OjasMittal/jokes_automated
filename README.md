@@ -6,7 +6,8 @@
 
 You can try the live API [here](https://jokes-automated.vercel.app/).
 
-![WhatsApp Image 2025-01-10 at 14 00 07_a3ea7589](https://github.com/user-attachments/assets/79955619-0e95-4942-9019-4bee1b8974e0)
+![api_img](https://github.com/user-attachments/assets/8e9ba7c8-87c3-405e-8646-3d2e72d6fcd5)
+
 
 ## Features
 - Integrates a joke API to send jokes automatically.
