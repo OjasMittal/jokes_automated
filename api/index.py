@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 from custom_email import send_email
-from sms import send_sms
 from utils.jokes import jokes
 import random
 
@@ -33,7 +32,6 @@ def send_joke():
 
     try:
         send_email(name, email, joke)
-        #send_sms(phone, joke)
     except Exception as e:
         return jsonify({"error": f"Failed to send email due to server error: {e}"}), 500
     
