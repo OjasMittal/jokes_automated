@@ -34,7 +34,7 @@ git clone https://github.com/OjasMittal/jokes_automated.git
 cd jokes_automated
 ```
 
-2. Set Up the Backend API
+### 2. Set Up the Backend API
 Install the required Python libraries:
 
 ```bash
@@ -44,7 +44,7 @@ Configure the API: Update the .env file with your credentials as in sample .env 
 
 Deploy the API: You can deploy the API on platforms like Vercel or any other Python-compatible hosting service or use the already deployed one.
 
-3. Set Up Google Sheets and Cron Job
+### 3. Set Up Google Sheets and Cron Job
 Google Sheets Setup:
 
 Create a Google Sheet linked to a Google Form.
@@ -58,10 +58,10 @@ Set up the Cron Job:
 
 In the script editor, configure a time-driven trigger to run the cron job at regular intervals.
 This script will collect form responses and send the appropriate jokes via the API.
-4. Running the Cron Job
+### 4. Running the Cron Job
 Once the Google Apps Script is set up, the cron job will trigger automatically according to your configured schedule. It will send an email to all form respondents with a joke.
 
-Usage
+### Usage
 Once everything is set up:
 
 Fill out the Google Form to simulate submissions.
@@ -69,6 +69,6 @@ The system will automatically send a joke to the email address provided in the f
 Contributing
 Feel free to fork the repository, make changes, and create pull requests for improvements or fixes.
 
-License
+### License
 This project is licensed under the MIT License.
 
