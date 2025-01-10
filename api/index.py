@@ -12,7 +12,7 @@ def index():
         "Here's an example of the joke payload you can use:<br>"
         "<pre>{\n"
         '    "name": "Ojas Mittal",\n'
-        '    "email": "ojasfarm31@gmail.com",\n'
+        '    "email": "ojasmittal3108@gmail.com",\n'
         '    "joke": "Hello, this is a joke" => (This parameter is optional)\n'
         "}</pre>"
     )
