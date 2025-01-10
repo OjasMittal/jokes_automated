@@ -61,7 +61,7 @@ This script will collect form responses and send the appropriate jokes via the A
 ### 4. Running the Cron Job
 Once the Google Apps Script is set up, the cron job will trigger automatically according to your configured schedule. It will send an email to all form respondents with a joke.
 
-### Usage
+## Usage
 Once everything is set up:
 
 Fill out the Google Form to simulate submissions.
@@ -69,6 +69,6 @@ The system will automatically send a joke to the email address provided in the f
 Contributing
 Feel free to fork the repository, make changes, and create pull requests for improvements or fixes.
 
-### License
+## License
 This project is licensed under the MIT License.
 
