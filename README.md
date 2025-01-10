@@ -6,6 +6,8 @@
 
 You can try the live API [here](https://jokes-automated.vercel.app/).
 
+![WhatsApp Image 2025-01-10 at 14 00 07_a3ea7589](https://github.com/user-attachments/assets/79955619-0e95-4942-9019-4bee1b8974e0)
+
 ## Features
 - Integrates a joke API to send jokes automatically.
 - Links Google Sheets with Google Forms to send jokes to emails from form responses.
