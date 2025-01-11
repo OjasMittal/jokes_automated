@@ -1,7 +1,8 @@
 import smtplib
 import os
 from dotenv import load_dotenv
-
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 load_dotenv()
 SMTP_SERVER = "smtp.gmail.com"
@@ -10,14 +11,30 @@ SMTP_PORT = 587
 EMAIL_LOGIN = os.getenv("EMAIL_LOGIN")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
-def send_email(name,to_email, joke):
+def send_email(to_email, pickup_line, name="friend"):
     try:
         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
             server.starttls()
             server.login(EMAIL_LOGIN, EMAIL_PASSWORD)
-            subject = "Here's a Joke for You!"
-            message = f"Subject: {subject}\n\nHey {name},\n\nAs promised, here's your lame joke:\n\n{joke} :)\n\nThanks for sparing your precious time in filling out the survey.\nRegards,\nTeam - Jokes :)"
-            server.sendmail(EMAIL_LOGIN, to_email, message)
+            
+            subject = "Pickup line for you!"
+            html_body = f"""
+            <html>
+            <body>
+                <p>Hi,</p>
+                <p>Thanks for your response!</p>
+                <p><b style="font-size: 20px;">{pickup_line}</b></p>
+            </body>
+            </html>
+            """
+            
+            msg = MIMEMultipart("alternative")
+            msg["Subject"] = subject
+            msg["From"] = EMAIL_LOGIN
+            msg["To"] = to_email
+            msg.attach(MIMEText(html_body, "html"))
+            
+            server.sendmail(EMAIL_LOGIN, to_email, msg.as_string())
     except Exception as e:
         print(f"Error in send_email: {e}")
         raise

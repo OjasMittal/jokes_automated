@@ -31,7 +31,7 @@ def send_joke():
     joke = data.get("joke") or random.choice(jokes)
 
     try:
-        send_email(name, email, joke)
+        send_email(email, joke)
     except Exception as e:
         return jsonify({"error": f"Failed to send email due to server error: {e}"}), 500
     

@@ -1,1 +1,3 @@
 .env
+__pycache__/custom_email.cpython-310.pyc
+utils/__pycache__/jokes.cpython-310.pyc
