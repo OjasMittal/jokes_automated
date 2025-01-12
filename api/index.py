@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from custom_email import send_email
-from utils.jokes import jokes
+from utils.jokes import jokes,pickup_lines
 import random
 
 app = Flask(__name__)
@@ -28,10 +28,10 @@ def send_joke():
 
     name = data.get("name")
     email = data.get("email")
-    joke = data.get("joke") or random.choice(jokes)
+    jokes = data.get("joke") or random.choice(pickup_lines)
 
     try:
-        send_email(email, joke)
+        send_email(email, jokes)
     except Exception as e:
         return jsonify({"error": f"Failed to send email due to server error: {e}"}), 500
     
