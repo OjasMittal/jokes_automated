@@ -11,19 +11,19 @@ SMTP_PORT = 587
 EMAIL_LOGIN = os.getenv("EMAIL_LOGIN")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
-def send_email(to_email, pickup_line, name="friend"):
+def send_email(to_email, content, name="friend"):
     try:
         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
             server.starttls()
             server.login(EMAIL_LOGIN, EMAIL_PASSWORD)
-            
-            subject = "Pickup line for you!"
+            formatted_content = content.replace("\n", "<br>")
+            subject = "Knock Knock ! Say Who is it?"
             html_body = f"""
             <html>
             <body>
                 <p>Hi,</p>
                 <p>Thanks for your response!</p>
-                <p><b style="font-size: 20px;">{pickup_line}</b></p>
+                <p><b style="font-size: 20px;">{formatted_content}</b></p>
             </body>
             </html>
             """
