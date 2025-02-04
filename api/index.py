@@ -23,10 +23,10 @@ def send_joke():
     if not data:
         return jsonify({"error": "No data received"}), 400
     
-    if not (data.get("name") or data.get("email")):
+    if not data.get("email"):
         return jsonify({"error": "Missing required fields name / email"}), 400
 
-    name = data.get("name")
+    name = data.get("name") or "friend"
     email = data.get("email")
     jokes = data.get("joke") or random.choice(knock_knock_jokes)
 

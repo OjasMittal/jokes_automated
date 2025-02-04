@@ -11,7 +11,7 @@ SMTP_PORT = 587
 EMAIL_LOGIN = os.getenv("EMAIL_LOGIN")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
-def send_email(to_email, content, name="friend"):
+def send_email(to_email, content):
     try:
         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
             server.starttls()
