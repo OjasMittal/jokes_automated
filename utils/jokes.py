@@ -101,3 +101,15 @@ pickup_lines = [
     "Are you bhel puri? Because you’re a perfect mix of everything I love.",
     "Are you a dosa at a South Indian restaurant? Because you’re worth waiting for.",
 ]
+
+knock_knock_jokes = [
+    "Knock, knock.\n– Who’s there?\n– Cow says.\n– Cow says who?\n– No, silly! Cow says 'Moo!'",
+
+    "Knock, knock.\n– Who’s there?\n– Tank.\n– Tank who?\n– You're welcome!",
+
+    "Knock, knock.\n– Who’s there?\n– Dishes.\n– Dishes who?\n– Dishes the police! Open up!",
+
+    "Knock, knock.\n– Who’s there?\n– Europe.\n– Europe who?\n– No, YOU’RE a poo!",
+
+    "Knock, knock.\n– Who’s there?\n– Atch.\n– Atch who?\n– Bless you!"
+]
