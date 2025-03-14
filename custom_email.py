@@ -17,7 +17,7 @@ def send_email(to_email, content):
             server.starttls()
             server.login(EMAIL_LOGIN, EMAIL_PASSWORD)
             formatted_content = content.replace("\n", "<br>")
-            subject = "Knock Knock ! Say Who is it?"
+            subject = "Here's Your PickUp Line!!"
             html_body = f"""
             <html>
             <body>
