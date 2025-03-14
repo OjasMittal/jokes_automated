@@ -101,6 +101,13 @@ pickup_lines = [
     "Are you bhel puri? Because you’re a perfect mix of everything I love.",
     "Are you a dosa at a South Indian restaurant? Because you’re worth waiting for.",
 ]
+pickup_lines_fitness = [
+    "Are you a yoga instructor? Because every time I see you, my heart does a full Surya Namaskar!",
+    "Are you a cricket pitch? Because I just want to spend all day on you!",
+    "Are we in a gym? Because my heart is doing more reps than my biceps right now!",
+    "Are you a badminton shuttle? Because you’ve been smashing my heart since I saw you!",
+    "Are you my protein shake? Because without you, my day feels incomplete!"
+]
 
 knock_knock_jokes = [
     "Knock, knock.\n– Who’s there?\n– Cow says.\n– Cow says who?\n– No, silly! Cow says 'Moo!'",
