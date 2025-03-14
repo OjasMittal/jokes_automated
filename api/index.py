@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from custom_email import send_email
-from utils.jokes import jokes,pickup_lines,knock_knock_jokes
+from utils.jokes import jokes,pickup_lines,knock_knock_jokes,pickup_lines_fitness
 import random
 
 app = Flask(__name__)
@@ -28,7 +28,7 @@ def send_joke():
 
     name = data.get("name") or "friend"
     email = data.get("email")
-    jokes = data.get("joke") or random.choice(knock_knock_jokes)
+    jokes = data.get("joke") or random.choice(pickup_lines_fitness)
 
     try:
         send_email(email, jokes)
